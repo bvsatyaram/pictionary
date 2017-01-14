@@ -7,8 +7,8 @@
     "serve": "lite-server",
     "build-css": "node-sass -o public/css src/scss/app.scss",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "coffee": "coffee -o public/js -cw src/coffee/app.coffee",
-    "start": "concurrently \"npm run watch-css\" \"npm run serve\""
+    "build-js": "coffee -o public/js -cw src/coffee/app.coffee",
+    "start": "concurrently \"npm run watch-css\" \"npm run build-js\" \"npm run serve\""
   },
   "author": "",
   "license": "ISC",
