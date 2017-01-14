@@ -1,0 +1,20 @@
+{
+  "name": "pictionary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "lite-server",
+    "build-css": "node-sass -o public/css src/scss/app.scss",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start": "concurrently \"npm run watch-css\" \"npm run serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "node-sass": "^4.3.0",
+    "nodemon": "^1.11.0"
+  }
+}
