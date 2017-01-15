@@ -5,11 +5,11 @@
       $('.roll-dice').click((function(_this) {
         return function(ev) {
           ev.preventDefault();
-          _this.enableRollTrigger();
           return _this.multiRoll();
         };
       })(this));
-      return this.rollDice();
+      this.rollDice();
+      return this.enableRollTrigger();
     },
     faces: ['front', 'back', 'right', 'left', 'top', 'bottom'],
     disableRollTrigger: function() {

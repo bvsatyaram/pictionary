@@ -2,9 +2,9 @@
   init: ->
     $('.roll-dice').click (ev) =>
       ev.preventDefault()
-      @enableRollTrigger()
       @multiRoll()
     @rollDice()
+    @enableRollTrigger()
   faces: ['front', 'back', 'right', 'left', 'top', 'bottom']
   disableRollTrigger: ->
     $('.roll-dice').addClass('disabled').text('Rolling...')

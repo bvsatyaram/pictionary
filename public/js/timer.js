@@ -23,12 +23,14 @@
       $('#timer .toggle-timer').text('Start');
       this.currentState = this.states.idle;
       this.stopAnimator(true);
-      return this.setTime(0);
+      this.setTime(0);
+      return this.stopAudio(this.timerAudio);
     },
     stop: function() {
       $('#timer .toggle-timer').text('Reset');
       this.currentState = this.states.stopped;
-      return this.stopAnimator();
+      this.stopAnimator();
+      return this.stopAudio(this.timerAudio);
     },
     toggle: function() {
       switch (this.currentState) {
@@ -44,7 +46,8 @@
       var currentTime;
       currentTime = Date.now();
       if (currentTime > this.endTime) {
-        return this.reset();
+        this.reset();
+        return this.startAudio(this.bellAudio);
       } else {
         return this.setTime(this.endTime - currentTime);
       }
@@ -64,11 +67,24 @@
       }
       return num;
     },
+    startAudio: function(audio) {
+      audio.currentTime = 0;
+      return audio.play();
+    },
+    stopAudio: function(audio) {
+      if (audio) {
+        return audio.pause();
+      }
+    },
     init: function() {
       this.reset();
+      this.timerAudio = new Audio('public/audio/adrenaline.mp3');
+      this.timerAudio.volume = 0.3;
+      this.bellAudio = new Audio('public/audio/ting.mp3');
       return $('#timer .toggle-timer').click((function(_this) {
         return function(ev) {
           ev.preventDefault();
+          _this.startAudio(_this.timerAudio);
           return _this.toggle();
         };
       })(this));
