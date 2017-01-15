@@ -2,9 +2,9 @@
 (function() {
   this.Pictionary = {
     words: {
-      person: ["Ape", "Bat", "Cat", "Dog"],
-      object: ["Pen", "Book", "TV"],
-      action: ["Run", "Sleep", "Eat"]
+      person: ["Jesus", "Muhammad", "Michael Jackson", "Adolf Hitler", "Albert Einstein", "Leonardo Da Vinci", "Sir Isaac Newton", "Abraham Lincoln", "Mahatma Gandhi", "Aristotle", "London", "Bangkok", "Paris", "Dubai", "Istanbul", "New York", "Singapore", "Kuala Lumpur", "Seoul", "Hong Kong", "Tokyo", "Barcelona", "Amsterdam", "Rome", "Milan", "Taipei", "Shanghai", "Vienna", "Prague", "Los Angeles", "Ape", "Bat", "Cat", "Dog", "Lion", "Leopard", "Tiger", "Donkey", "Fox"],
+      object: ["Diary", "Bottle", "Water", "Packet", "Chewing gum", "Tissue", "Glasses", "Watch", "Sweet", "Photo", "Camera", "Stamp", "Postcard", "Dictionary", "Coin", "Brush", "Credit card", "Identity card", "Key", "Mobile phone", "Phone card", "Wallet", "Button", "Umbrella", "Pen", "Pencil", "Lighter", "Cigarette", "Match", "Lipstick", "Purse", "Case", "Clip", "Scissors", "Rubber", "File", "Banknote", "Passport", "Driving licence", "Comb", "Notebook", "Laptop", "Rubbish", "Mirror", "Painkiller", "Sunscreen", "Toothbrush", "Headphone", "Player", "Battery", "Light bulb", "Bin", "Newspaper", "Magazine", "Alarm clock"],
+      action: ["Buy", "Sell", "Run", "Walk", "Stand", "Sit", "Sleep", "Wake", "Eat", "Chew", "Swallow", "Speak", "Talk", "Say", "Drink", "Look", "See", "Watch", "Listen", "Hear", "Write", "Draw", "Sign", "Go", "Come", "Want", "Have", "Hit", "Kick", "Push", "Pull", "Open", "Close", "Put", "Take", "Enter", "Leave", "Order", "Demand", "Request", "Ask", "Answer"]
     },
     randomInteger: function(limit) {
       return Math.floor(Math.random() * limit);
