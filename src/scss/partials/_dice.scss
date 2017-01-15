@@ -45,12 +45,12 @@
       }
       &.bottom-face {
         transform: rotateX( -90deg ) translateZ( 100px );
-        background-color: #9e9e9e;
+        background-color: #9c27b0;
       }
     }
 
     transform: translateZ( -100px );
-    transition: transform 1s;
+    transition: transform 0.5s;
 
     &.show-front  { transform: translateZ( -100px ) rotateY(    0deg ); }
     &.show-back   { transform: translateZ( -100px ) rotateX( -180deg ); }
@@ -64,5 +64,5 @@
 .roll-dice {
   width: 10rem;
   display: block;
-  margin: 2rem auto 0;
+  margin: 4rem auto 0;
 }

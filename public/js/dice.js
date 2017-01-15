@@ -5,12 +5,19 @@
       $('.roll-dice').click((function(_this) {
         return function(ev) {
           ev.preventDefault();
-          return _this.rollDice();
+          _this.enableRollTrigger();
+          return _this.multiRoll();
         };
       })(this));
       return this.rollDice();
     },
     faces: ['front', 'back', 'right', 'left', 'top', 'bottom'],
+    disableRollTrigger: function() {
+      return $('.roll-dice').addClass('disabled').text('Rolling...');
+    },
+    enableRollTrigger: function() {
+      return $('.roll-dice').removeClass('disabled').text('Roll');
+    },
     randomFace: function(oldFace) {
       var newFace;
       newFace = oldFace;
@@ -25,6 +32,27 @@
       newFace = this.randomFace(this.activeFace);
       this.activeFace = newFace;
       return $('.dice').removeClass("show-" + oldFace).addClass("show-" + newFace);
+    },
+    multiRoll: function() {
+      var limit, multiRoller, rollCounter;
+      if (this.rollingInProgress) {
+        return;
+      }
+      this.rollingInProgress = true;
+      this.disableRollTrigger();
+      limit = 20 + Math.floor(Math.random() * 5);
+      rollCounter = 0;
+      return multiRoller = setInterval((function(_this) {
+        return function() {
+          rollCounter += 1;
+          _this.rollDice();
+          if (rollCounter >= limit) {
+            _this.rollingInProgress = false;
+            _this.enableRollTrigger();
+            return clearInterval(multiRoller);
+          }
+        };
+      })(this), 300);
     }
   };
 
