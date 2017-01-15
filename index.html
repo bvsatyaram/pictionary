@@ -10,17 +10,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="public/js/timer.js"></script>
     <script src="public/js/pictionary.js"></script>
+    <script src="public/js/dice.js"></script>
   </head>
   <body>
     <div class="container center-align">
-      <section id="timer">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <div class="time">00:00</div>
-            <a class="waves-effect waves-light btn btn-large toggle-timer" href="#">Start</a>
+      <div class="row">
+        <section id="timer" class="col s4">
+          <h2 class="blue-grey-text">Timer</h2>
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <div class="time">00:00</div>
+              <a class="waves-effect waves-light btn btn-large toggle-timer" href="#">Start</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section class="col s4">
+          <h2 class="blue-grey-text">Dice</h2>
+          <div id="dice-container">
+            <div class="dice show-front">
+              <figure class="front-face">1</figure>
+              <figure class="back-face">2</figure>
+              <figure class="right-face">3</figure>
+              <figure class="left-face">4</figure>
+              <figure class="top-face">5</figure>
+              <figure class="bottom-face">6</figure>
+            </div>
+          </div>
+          <a class="waves-effect waves-light btn btn-large roll-dice" href="#">Roll</a>
+        </section>
+        <section class="col s4"></section>
+      </div>
     </div>
   </body>
 </html>

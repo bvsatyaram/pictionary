@@ -1,10 +1,68 @@
-#timer {
-  margin-top: 3rem;
-  width: 20rem; }
-  #timer .card {
-    padding: 5rem 0; }
-  #timer .time {
-    font-size: 4rem;
-    font-weight: 200; }
-  #timer .toggle-timer {
-    width: 10rem; }
+#timer .card {
+  padding: 5rem 0; }
+
+#timer .time {
+  font-size: 4rem;
+  font-weight: 200; }
+
+#timer .toggle-timer {
+  width: 10rem; }
+
+#dice-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+  margin: 4rem auto 0; }
+  #dice-container .dice {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s; }
+    #dice-container .dice figure {
+      margin: 0;
+      width: 200px;
+      height: 200px;
+      display: block;
+      position: absolute;
+      font-size: 100px;
+      line-height: 200px;
+      text-align: center;
+      color: white; }
+      #dice-container .dice figure.front-face {
+        transform: rotateY(0deg) translateZ(100px);
+        background-color: #f44336; }
+      #dice-container .dice figure.back-face {
+        transform: rotateX(180deg) translateZ(100px);
+        background-color: #3f51b5; }
+      #dice-container .dice figure.right-face {
+        transform: rotateY(90deg) translateZ(100px);
+        background-color: #4caf50; }
+      #dice-container .dice figure.left-face {
+        transform: rotateY(-90deg) translateZ(100px);
+        background-color: #ff9800; }
+      #dice-container .dice figure.top-face {
+        transform: rotateX(90deg) translateZ(100px);
+        background-color: #795548; }
+      #dice-container .dice figure.bottom-face {
+        transform: rotateX(-90deg) translateZ(100px);
+        background-color: #9e9e9e; }
+    #dice-container .dice.show-front {
+      transform: translateZ(-100px) rotateY(0deg); }
+    #dice-container .dice.show-back {
+      transform: translateZ(-100px) rotateX(-180deg); }
+    #dice-container .dice.show-right {
+      transform: translateZ(-100px) rotateY(-90deg); }
+    #dice-container .dice.show-left {
+      transform: translateZ(-100px) rotateY(90deg); }
+    #dice-container .dice.show-top {
+      transform: translateZ(-100px) rotateX(-90deg); }
+    #dice-container .dice.show-bottom {
+      transform: translateZ(-100px) rotateX(90deg); }
+
+.roll-dice {
+  width: 10rem;
+  display: block;
+  margin: 2rem auto 0; }
