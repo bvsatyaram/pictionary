@@ -75,7 +75,12 @@
     border: 3px solid #fff;
     border-radius: 4px; }
     #pictionary-card .word-container i {
-      margin-right: 0.5rem; }
+      margin-right: 0.5rem;
+      visibility: hidden; }
+    #pictionary-card .word-container.allPlay i {
+      visibility: visible; }
+    #pictionary-card .word-container .word {
+      font-weight: 600; }
     #pictionary-card .word-container i, #pictionary-card .word-container .word {
       font-size: 1.5rem;
       line-height: 1rem; }

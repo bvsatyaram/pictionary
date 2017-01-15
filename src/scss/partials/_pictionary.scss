@@ -9,6 +9,17 @@
 
     i {
       margin-right: 0.5rem;
+      visibility: hidden;
+    }
+
+    &.allPlay {
+      i {
+        visibility: visible;
+      }
+    }
+
+    .word {
+      font-weight: 600;
     }
 
     i, .word {
