@@ -1,0 +1,23 @@
+#pictionary-card {
+  padding: 1.5rem 1rem;
+
+  .word-container {
+    padding: 1rem 0.5rem 1rem 1rem;
+    margin: 1rem 0;
+    border: 3px solid #fff;
+    border-radius: 4px;
+
+    i {
+      margin-right: 0.5rem;
+    }
+
+    i, .word {
+      font-size: 1.5rem;
+      line-height: 1rem;
+    }
+  }
+}
+
+#pictionary-actions {
+  margin-top: 3rem;
+}

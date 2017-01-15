@@ -66,3 +66,19 @@
   width: 10rem;
   display: block;
   margin: 4rem auto 0; }
+
+#pictionary-card {
+  padding: 1.5rem 1rem; }
+  #pictionary-card .word-container {
+    padding: 1rem 0.5rem 1rem 1rem;
+    margin: 1rem 0;
+    border: 3px solid #fff;
+    border-radius: 4px; }
+    #pictionary-card .word-container i {
+      margin-right: 0.5rem; }
+    #pictionary-card .word-container i, #pictionary-card .word-container .word {
+      font-size: 1.5rem;
+      line-height: 1rem; }
+
+#pictionary-actions {
+  margin-top: 3rem; }
